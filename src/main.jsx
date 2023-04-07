@@ -1,48 +1,49 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import './index.css'
+// import './index.css'
+// import React from 'react'
+// import ReactDOM from 'react-dom/client'
 
-// Do not change
-class Username extends React.Component {
-  state = { value: "" };
+// // Don't modify this component
+// class Username extends React.Component {
+//   state = { value: "" };
 
-  changeValue(value) {
-    this.setState({ value });
-  }
+//   changeValue(value) {
+//     this.setState({ value });
+//   }
 
-  render() {
-    const { value } = this.state;
-    return <h1>{value}</h1>;
-  }
-}
+//   render() {
+//     const { value } = this.state;
+//     return <h1>{value}</h1>;
+//   }
+// }
 
-// TODO: Fix App Component.. have Username component display the input text once button is clicked.
+// // Allow user to update their Username.
+// // Username component displays when button clicked.
+// // UseRef in App and Username component
+// function App() {
+//   const inputRef = React.useRef(null);
+//   const usernameRef = React.useRef(null);
 
-// Utilize useRef hook
-function App() {
-  function clickHandler() {
-    // Get the value of user input and set to the state.
-    // Call changeValue method from Username
-  }
+//   function clickHandler() {
+//     // Call the function from above, changeValue
+//     const inputVal = inputRef.current.value;
+//     usernameRef.current.changeValue(inputVal);
+//   }
 
-  return (
-    <div>
-      <input type="text" />
-      <button onClick={clickHandler}>Change Username</button>
-      <Username />
-    </div>
-  );
-}
+//   return (
+//     <div>
+//       <button onClick={clickHandler}>Change Username</button>
+//       <input type="text" ref={inputRef} />
+//       <Username ref={usernameRef} />
+//     </div>
+//   );
+// }
 
-document.body.innerHTML = "<div id='root'></div>";
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<App />);
+// document.body.innerHTML = "<div id='root'></div>";
+// const root = ReactDOM.createRoot(document.getElementById("root"));
+// root.render(<App />);
 
-setTimeout(() => {
-  document.querySelector("input").value = "John Doe";
-  document.querySelector("button").click();
+// setTimeout(() => {
+//   document.querySelector("input").value = "John Doe";
+//   document.querySelector("button").click();
+// }, 300);
 
-  setTimeout(() => {
-    console.log(document.getElementById("root").innerHTML);
-  }, 300);
-}, 300);
